@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Local_RUN" class="navigator-link ">
-                    <span>E:\Workspace_2023\FitPeo\testng.xml</span>
+                    <span>C:\Benny_workspace\FitPeo\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Local_RUN" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Local_RUN" class="hide-methods passed suite-Local_RUN"> (hide)</a> <!-- hide-methods passed suite-Local_RUN -->
+                      <a href="#" panel-name="suite-Local_RUN" class="show-methods passed suite-Local_RUN"> (show)</a> <!-- show-methods passed suite-Local_RUN -->
+                    </span>
+                    <div class="method-list-content passed suite-Local_RUN">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Local_RUN" title="runner.FitPeoRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Adjust the Slider&quot;, &quot;FitPeo&quot;)">runScenario("Adjust the Slider", "FitPeo")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Local_RUN -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -104,23 +118,41 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Local_RUN" class="panel Local_RUN">
+          <div class="suite-Local_RUN-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">runner.FitPeoRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Adjust the Slider&quot;, &quot;FitPeo&quot;)">
+                  </a> <!-- runScenario("Adjust the Slider", "FitPeo") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Adjust the Slider","FitPeo")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Local_RUN-class-passed -->
         </div> <!-- panel Local_RUN -->
         <div panel-name="test-xml-Local_RUN" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\Workspace_2023\FitPeo\testng.xml</span>
+            <span class="header-content">C:\Benny_workspace\FitPeo\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Local RUN&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ORange_HRM&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;FitPeo&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;URL&quot; value=&quot;https://www.fitpeo.com&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;runner.FitPeoRunner&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ORange_HRM --&gt;
+  &lt;/test&gt; &lt;!-- FitPeo --&gt;
 &lt;/suite&gt; &lt;!-- Local RUN --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -132,7 +164,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ORange_HRM (1 class)</span>
+                <span class="test-name">FitPeo (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,6 +174,14 @@
             <span class="header-content">Groups for Local RUN</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Local_RUN" class="panel">
@@ -158,12 +198,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'runner.FitPeoRunner')
+data.setCell(0, 3, 35374);
 window.suiteTableData['Local_RUN']= { tableData: data, tableDiv: 'times-div-Local_RUN'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-Local_RUN">
               </div> <!-- times-div-Local_RUN -->
             </div> <!-- times-div -->
@@ -191,22 +235,24 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.FitPeoRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">setUpClass(org.testng.TestRunner@33308786)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@4ce5013a)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">657 ms</span>
+                <span class="method-name">beforeClass(chrome, https://www.fitpeo.com)</span>
+                <span class="method-start">1252 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Adjust the Slider", "FitPeo")</span>
+                <span class="method-start">10575 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">684 ms</span>
+                <span class="method-start">45959 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">686 ms</span>
+                <span class="method-start">46415 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

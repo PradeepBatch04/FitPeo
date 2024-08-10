@@ -3,7 +3,7 @@
 	<configuration>
 		<!-- report theme -->
 		<!-- standard, dark -->
-		<theme>dark</theme>
+		<theme>standard</theme>
 
 		<!-- document encoding -->
 		<!-- defaults to UTF-8 -->
@@ -14,16 +14,16 @@
 		<protocol>https</protocol>
 
 		<!-- title of the document -->
-		<documentTitle>ResponsiveEd</documentTitle>
+		<documentTitle>FitPeo</documentTitle>
 
 		<!-- report name - displayed at top-nav -->
 		<reportName>
 			
-        <!--  <![CDATA[
+         <![CDATA[
                
-              <img src="https://i.postimg.cc/2VHvwmTc/sapphiruslogo.png' border='0' alt='sapphiruslogo" width = "200px" height = "50px">
+              <img src="https://i.postimg.cc/wj9YLFJr/pitpeo.png' border='0' alt='fitPeo_logo" width = "200px" height = "50px">
               
-                ]]> -->
+                ]]> 
         </reportName>
 		
 

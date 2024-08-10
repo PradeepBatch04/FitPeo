@@ -1,9 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 3.875 s <<< FAILURE! - in TestSuite
-setUpClass(runner.FitPeoRunner)  Time elapsed: 3.407 s  <<< FAILURE!
-io.cucumber.core.gherkin.FeatureParserException: 
-Failed to parse resource at: file:///E:/Workspace_2023/FitPeo/src/test/resources/Features/FitPeo.feature
-(5:5): expected: #EOF, #TableRow, #DocStringSeparator, #StepLine, #TagLine, #ExamplesLine, #ScenarioLine, #RuleLine, #Comment, #Empty, got 'The Scroll to revenue calculator slider'
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 55.264 s - in TestSuite

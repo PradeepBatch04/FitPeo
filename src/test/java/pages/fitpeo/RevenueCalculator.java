@@ -122,6 +122,7 @@ public class RevenueCalculator {
 		Assert.assertTrue(headerElement.isDisplayed(), "Header Displayed");
 		WebElement element=headerElement.findElement(By.xpath("descendant::p[7]"));
 		String value=element.getText().trim();
+		System.out.println(value);
 		String actualamount= value.replaceAll("[\r\n]+", " ");
 		System.out.println(actualamount);
 		Assert.assertEquals(actualamount, amount,"Amount Matched");

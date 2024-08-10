@@ -62,16 +62,14 @@ public class FitPeoStepdef extends BasePage{
 
 	@AfterStep
     public static void tearDown(Scenario scenario) {
-		System.out.println();
         //validate if scenario has failed
         if(scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) BasePage.driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getLine().toString()); 
         }else {
-        	 final byte[] screenshot = ((TakesScreenshot) BasePage.driver).getScreenshotAs(OutputType.BYTES);
-             scenario.attach(screenshot, "image/png", scenario.getLine().toString()); 
+       	 final byte[] screenshot = ((TakesScreenshot) BasePage.driver).getScreenshotAs(OutputType.BYTES);
+         scenario.attach(screenshot, "image/png", scenario.getLine().toString()); 
         }
-     
      
     }
 
