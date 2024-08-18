@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -25,7 +26,9 @@ public class BaseClass {
 		
 		switch (brower.toUpperCase()) {
 		case "CHROME":
-			driver=new ChromeDriver();
+		    ChromeOptions options=new ChromeOptions();
+	        options.addArguments("headless");
+			driver=new ChromeDriver(options);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
 			break;

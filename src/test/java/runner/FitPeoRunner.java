@@ -11,9 +11,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/Features/FitPeo.feature"}, 	
 		glue = {"stepdefiniation"},
-		 plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, 
-		 monochrome = true, 
-		 dryRun = false
+		 monochrome = true,
+	     dryRun = false,  
+	     plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }
                 
 		)
     

@@ -19,12 +19,15 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import common.WaitState;
+
 
 
 
 public class RevenueCalculator {
 	WebDriver driver;
 	Actions actions;
+	WaitState wait;
 	
 	@FindBy(how = How.XPATH,using = "//p[contains(text(),'State to State')]")//ancestor::div[1]
 	private WebElement sateToSate;
@@ -45,10 +48,12 @@ public class RevenueCalculator {
 	public RevenueCalculator(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		actions = new Actions(driver);
+		wait= new WaitState(driver);
 		this.driver=driver;
 	}
 	
 	public void revenue_calculator_slider() {
+		 wait.elementToBeClickable(sateToSate);
 		 JavascriptExecutor jsExecutor= (JavascriptExecutor) driver;
 		 jsExecutor.executeScript("arguments[0].scrollIntoView();", sateToSate);
 		  
@@ -107,6 +112,7 @@ public class RevenueCalculator {
 			if(checkValue.equalsIgnoreCase(actualCheck)) {
 				Assert.assertTrue(true);
 				checkbox.findElement(By.xpath("following-sibling::label//span/input")).click();
+				break;
 			}
 		}
 	  } catch (Exception e) {
